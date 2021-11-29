@@ -1,50 +1,30 @@
-import React, { useState } from 'react';
-import { IconContext } from 'react-icons';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import { NavBarContainer , Nav, NavItem, NavLinks, NavLogo, NavMenu, MobileIcon, NavIcon  } from '../GlobalStyles';
+import React from 'react';
+import { FaBars } from 'react-icons/fa';
+import { MobileIcon, Nav, NavContainer, NavItem, NavLinks, NavLogo, NavMenu } from '../Styles';
 
-const NavBar = () => {
-    const [click, setClick] = useState(false);
-    const handleClick = () => setClick(!click);
-    const closeMobileMenu = () => setClick(false);
+const NavBar = ({ toggle }) => {
     return (
-        <>
-            <IconContext.Provider value={{ color: '#fff' }}>
-                <Nav>
-                    <NavBarContainer>
-                        <NavLogo to='/' onClick={closeMobileMenu}>
-                            <NavIcon/>
-                            Adam KONAN
-                        </NavLogo>
-                        <MobileIcon onClick={handleClick}>
-                            {click ? <FaTimes/>: < FaBars/>}
-                        </MobileIcon>
-                        <NavMenu onClick={handleClick} click={click}>
-                            <NavItem>
-                               <NavLinks exact to='/' onClick={closeMobileMenu} activeStyle={{color: '#15cdfc'}}>
-                                   Acceuil
-                               </NavLinks>
-                            </NavItem>
-                            <NavItem>
-                               <NavLinks exact to='/about' onClick={closeMobileMenu} activeStyle={{color: '#15cdfc'}}>
-                                    À propos
-                               </NavLinks>
-                            </NavItem>
-                            <NavItem>
-                               <NavLinks exact to='/skills' onClick={closeMobileMenu} activeStyle={{color: '#15cdfc'}}>
-                                   Compétences
-                               </NavLinks>
-                            </NavItem>
-                            <NavItem>
-                               <NavLinks exact to='/contact' onClick={closeMobileMenu} activeStyle={{color: '#15cdfc'}}>
-                                   Contact
-                               </NavLinks>
-                            </NavItem>
-                        </NavMenu>
-                    </NavBarContainer>
-                </Nav>  
-            </IconContext.Provider> 
-        </>
+        <Nav>
+            <NavContainer>
+                <NavLogo to='/'>
+                    Adam Konan
+                </NavLogo>
+                <MobileIcon onClick={toggle}>
+                    <FaBars/>
+                </MobileIcon>
+                <NavMenu>
+                    <NavItem>
+                        <NavLinks to="about"> A propos </NavLinks>
+                    </NavItem>
+                    <NavItem>
+                        <NavLinks to="skill"> Compétences </NavLinks>
+                    </NavItem>
+                    <NavItem>
+                        <NavLinks to="contact"> Contacts </NavLinks>
+                    </NavItem>
+                </NavMenu>
+            </NavContainer>
+        </Nav>
     );
 };
 
