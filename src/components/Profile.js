@@ -22,7 +22,7 @@ const Profile = () => {
                 <ProfileH1> Salut, Je suis Adam Konan votre </ProfileH1>
                 <ProfileP>
                     <Typical
-                        steps={['Data Scientist', 3000, 'Développeur Django', 3000, 'Développeur React js', 3000, 'Web Pentester', 3000]}
+                        steps={['Dev Machine Learning', 3000, 'Développeur Django', 3000, 'Développeur React js', 3000, 'Web Pentester', 3000]}
                         loop={Infinity} 
                         wrapper="h3"/>
                 </ProfileP>

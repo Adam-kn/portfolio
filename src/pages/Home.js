@@ -3,6 +3,7 @@ import SideBar from '../components/SideBar';
 import NavBar from '../components/NavBar';
 import Profile from '../components/Profile';
 import About from '../components/About';
+import Certifications from '../components/Certifications';
 
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
             <NavBar toggle={toggle}/>
             <Profile/>
             <About/>
+            <Certifications/>
         </>
     );
 };

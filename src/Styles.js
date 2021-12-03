@@ -119,7 +119,7 @@ export const NavLinks = styled(LinkS)`
   cursor: pointer;
 
   &.active {
-    border-bottom: #01bf71;
+    border-bottom: 3px solid #113CFC;
   }
 `;
 
@@ -262,7 +262,7 @@ export const NavItem = styled.li`
 `;
 
 
-export const AboutContainer = styled.div`
+export const Container = styled.div`
   background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
 
   @media screen and (max-width: 768px) {
@@ -271,10 +271,10 @@ export const AboutContainer = styled.div`
 `;
 
 
-export const AboutWrapper = styled.div`
+export const Wrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 860px;
+  height: 100%;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
@@ -283,8 +283,9 @@ export const AboutWrapper = styled.div`
 `;
 
 
-export const AboutRow = styled.div`
+export const Row = styled.div`
   display: grid;
+  padding-top: -250px;
   grid-auto-columns: minmax(auto, 1fr);
   align-items: center;
   grid-template-areas: ${({imgStart}) => ( imgStart ? `'col2 col1'`:`'col1 col2'`)};
@@ -316,14 +317,14 @@ export const TextWrapper = styled.div`
 `;
 
 
-export const TopLine = styled.p`
+export const TopLine = styled.h4`
   color: #113CFC;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 30px;
   font-weight: 700;
   letter-spacing: 1.4px;
   text-transform: uppercase;
-  margin-bottom: 16px;
+  align-items: center;
+  text-align: center;
 `;
 
 export const Subtitle = styled.p`
@@ -345,4 +346,19 @@ export const Img = styled.img`
   width: 100%;
   margin: 0 0 10px 0;
   padding-right: 0;
+`;
+
+export const TitleWrap = styled.ul`
+  font-size: 20px;
+`;
+
+
+export const Title = styled.li`
+  color: #113CFC;
+`;
+
+export const LinkC = styled.a`
+  text-decoration: none;
+  cursor: pointer;
+  color: red;
 `;
