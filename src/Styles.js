@@ -387,6 +387,7 @@ export const Card = styled.div`
      padding-bottom: 10px;
      display: flex;
      height: 100%;
+     width: 100%;
      flex-direction: column;
    }
 
@@ -453,8 +454,11 @@ export const ProjectP = styled.p`
 
 
 export const SkillsP = styled.p`
-  padding-left: 60px;
-  padding-right: 60px;
+  @media screen and (max-width: 768px) {
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+  }
 `;
 
 
@@ -467,6 +471,14 @@ export const Progress = styled.div`
   border-radius: 20px;
   height: 20px;
   width: 400px;
+
+  @media screen and (max-width: 768px) {
+    width: 200px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 350px;
+  }
 `;
 
 

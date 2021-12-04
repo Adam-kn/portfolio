@@ -45,7 +45,7 @@ const Projects = () => {
                         <ProjectIcon src={webpentest}/>
                         <ProjectTitle> Webpentest </ProjectTitle>
                         <ProjectP>
-                            Dans le cadre de la sécurité informatique, le but ici c'est de d'observer la platform de simulation afin de trouver des failles de plusieurs types.
+                            Dans le cadre de la sécurité informatique, le but ici c'est de d'observer la platform de simulation afin de trouver des failles.
                         </ProjectP>
                         <ProjectP>Stack: BurpSuite</ProjectP>
                     </Card>
