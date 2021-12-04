@@ -4,6 +4,8 @@ import NavBar from '../components/NavBar';
 import Profile from '../components/Profile';
 import About from '../components/About';
 import Certifications from '../components/Certifications';
+import Projects from '../components/Projects';
+import Skills from '../components/Skills';
 
 
 const Home = () => {
@@ -20,6 +22,8 @@ const Home = () => {
             <Profile/>
             <About/>
             <Certifications/>
+            <Projects/>
+            <Skills/>
         </>
     );
 };

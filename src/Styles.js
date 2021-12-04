@@ -219,8 +219,10 @@ export const ProfileBtn = styled.button`
   font-size: 20px;
   padding: 14px 48px;
   border-radius: 50px;
+  border-width: 4px;
   cursor: pointer;
-  background: #2E4C6D;
+  border-color: #2E4C6D;
+  background: #fff;
 
   &:hover {
     background: #113CFC;
@@ -265,9 +267,9 @@ export const NavItem = styled.li`
 export const Container = styled.div`
   background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
 
-  @media screen and (max-width: 768px) {
+  /*@media screen and (max-width: 768px) {
     padding: 100px 0;
-  }
+  }*/
 `;
 
 
@@ -354,11 +356,122 @@ export const TitleWrap = styled.ul`
 
 
 export const Title = styled.li`
-  color: #113CFC;
+ color: #fff;
 `;
 
 export const LinkC = styled.a`
   text-decoration: none;
   cursor: pointer;
-  color: red;
+  color: #113CFC;
+`;
+
+
+export const Card = styled.div`
+   background:#fff ;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   border-radius: 10px;
+   max-height: 400px;
+   box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+   transition: all 0.2s ease-in-out;
+
+   &:hover {
+     transform: scale(1.05);
+     transition: all 0.2s ease-in-out;
+     cursor: pointer;
+   }
+
+   @media screen and (max-width: 480px) {
+     padding-bottom: 10px;
+     display: flex;
+     height: 100%;
+     flex-direction: column;
+   }
+
+`;
+
+
+export const ProjectIcon = styled.img`
+  height: 300px;
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+`;
+
+
+export const ProjectTitle = styled.h2`
+  font-size: 1rem;
+  color: #000;
+  margin-bottom: 10px;
+
+`;
+
+export const ProjectContainer = styled.div`
+  background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  @media screen and (max-width: 768px) {
+    height: 100%;
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 100%;
+  }
+`;
+
+export const ProjectWrp = styled.div`
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  grid-gap: 16px;
+  padding: 0 50px;
+  padding-bottom: 50px;
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+`;
+
+
+export const ProjectP = styled.p`
+  font-size: 1rem;
+  text-align: center;
+`;
+
+
+export const SkillsP = styled.p`
+  padding-left: 60px;
+  padding-right: 60px;
+`;
+
+
+export const SkillsTitle = styled.h2`
+  color: #fff;
+`;
+
+export const Progress = styled.div`
+  background-color: #d8d8d8;
+  border-radius: 20px;
+  height: 20px;
+  width: 400px;
+`;
+
+
+export const ProgressDone = styled.div`
+  background-color: #113CFC;
+  border-radius: 20px;
+  height: 100%;
 `;
