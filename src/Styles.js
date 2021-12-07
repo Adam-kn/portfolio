@@ -501,6 +501,7 @@ export const ProgressDone = styled.div`
 
 export const ContactLab = styled.label`
   color: #fff;
+  font-size: 1.2rem;
 `;
 
 
@@ -545,4 +546,19 @@ export const FromWarp = styled.p`
 
 export const ErrorMs = styled.span`
   color: red;
+`;
+
+
+export const SuccesStyle = styled.div`
+  color: #fff;
+  padding-top: 30px;
+  font-size: 1.3rem;
+`;
+
+export const FooterSyled = styled.footer`
+  text-align: center;
+  background-color: #010606;
+  color: #fff;
+  padding: 20px;
+  font-size: 1.2rem;
 `;

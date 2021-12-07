@@ -1,10 +1,11 @@
-import React from 'react';
-import { BtnSubmit, Col1, Col2, ContactForm, ContactLab, Container, ErrorMs, FromWarp, Img, ImgWrapper, Input, Row, Textarea, TextWrapper, TopLine, Wrapper } from '../Styles';
+import React, { useState } from 'react';
+import { BtnSubmit, Col1, Col2, ContactForm, ContactLab, Container, ErrorMs, FromWarp, Img, ImgWrapper, Input, Row, SuccesStyle, Textarea, TextWrapper, TopLine, Wrapper } from '../Styles';
 import contact from '../imges/contact.svg';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
 const Contact = () => {
+    const [status, setStatus] = useState("")
     const { register, handleSubmit, formState: {errors}, reset } = useForm();
     const onSubmit = values => {
         let postUrl = 'https://api.emailjs.com/api/v1.0/email/send';
@@ -23,6 +24,7 @@ const Contact = () => {
             },
         })
         reset();
+        setStatus("Message Envoyé avec succès, vous serez recontacté dès réception.");
     };
 
     return (
@@ -45,6 +47,7 @@ const Contact = () => {
                                         {errors.message && errors.message.type === "required" && <ErrorMs> Champ obligatoire </ErrorMs>}
                                     </FromWarp> <br /> <br />
                                     <BtnSubmit type="submit"/>
+                                    <SuccesStyle>{status}</SuccesStyle>
                                 </ContactForm>
                             </TextWrapper>
                         </Col1>
