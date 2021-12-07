@@ -483,7 +483,7 @@ export const Progress = styled.div`
   width: 400px;
 
   @media screen and (max-width: 768px) {
-    width: 200px;
+    width: 150px;
   }
 
   @media screen and (max-width: 1000px) {
