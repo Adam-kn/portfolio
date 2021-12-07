@@ -145,6 +145,10 @@ export const SocialIcon = styled.a`
  cursor: pointer;
  text-decoration: none;
  color: #fff;
+
+ @media screen and (max-width: 768px) {
+   font-size: 35px;
+ }
 `;
 
 
@@ -190,6 +194,16 @@ export const ProfileContent = styled.div`
   padding: 8px 24px;
 `;
 
+export const TypicalStyled = styled.div`
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  
+  @media screen and (max-width: 768px) {
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
+`;
 
 export const ProfileH1 = styled.h1`
   color: #fff;
@@ -266,10 +280,6 @@ export const NavItem = styled.li`
 
 export const Container = styled.div`
   background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
-
-  /*@media screen and (max-width: 768px) {
-    padding: 100px 0;
-  }*/
 `;
 
 
@@ -453,7 +463,7 @@ export const ProjectP = styled.p`
 `;
 
 
-export const SkillsP = styled.p`
+export const SkillsP = styled.div`
   @media screen and (max-width: 768px) {
     padding-right: 0;
     padding-left: 0;
@@ -486,4 +496,53 @@ export const ProgressDone = styled.div`
   background-color: #113CFC;
   border-radius: 20px;
   height: 100%;
+`;
+
+
+export const ContactLab = styled.label`
+  color: #fff;
+`;
+
+
+export const Input = styled.input`
+  border-color: #113CFC;
+  border-width: 4px;
+  border-radius: 18px;
+  font-size: 1.2rem;
+  text-indent: 10px;
+  width: 300px;
+  height: 50px;
+`;
+
+
+export const Textarea = styled.textarea`
+ border-radius: 15px;
+ border-width: 3px;
+ font-size: 1.2rem;
+ text-indent: 10px;
+ border-color: #113CFC;
+ width: 300px;
+ height: 250px;
+`;
+
+export const ContactForm = styled.form`
+  align-items: center;
+  text-align: center;
+`;
+
+export const BtnSubmit = styled.input`
+  width: 200px;
+  height: 40px;
+  border-radius: 24px;
+  font-size: 20px;
+`;
+
+
+export const FromWarp = styled.p`
+
+`;
+
+
+export const ErrorMs = styled.span`
+  color: red;
 `;
